@@ -1,0 +1,50 @@
+{
+  "name": "conversationalai",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^18.0.1",
+    "@angular/cdk": "^18.0.1",
+    "@angular/common": "^18.0.1",
+    "@angular/compiler": "^18.0.1",
+    "@angular/core": "^18.0.1",
+    "@angular/forms": "^18.0.1",
+    "@angular/material": "^18.0.1",
+    "@angular/platform-browser": "^18.0.1",
+    "@angular/platform-browser-dynamic": "^18.0.1",
+    "@angular/router": "^18.0.1",
+    "@aws-sdk/client-bedrock-runtime": "^3.592.0",
+    "@aws-sdk/client-polly": "^3.600.0",
+    "@aws-sdk/client-transcribe-streaming": "^3.588.0",
+    "buffer": "^6.0.3",
+    "microphone-stream": "^6.0.1",
+    "mitt": "^3.0.1",
+    "pizzip": "^3.1.7",
+    "process": "^0.11.10",
+    "rxjs": "~7.8.0",
+    "stream-browserify": "^3.0.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^18.0.2",
+    "@angular/cli": "^18.0.2",
+    "@angular/compiler-cli": "^18.0.1",
+    "@types/jasmine": "~5.1.0",
+    "@types/node": "^20.14.1",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.4.5"
+  }
+}

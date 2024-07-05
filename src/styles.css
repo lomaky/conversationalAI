@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+  height: 100vh;
+  background: #000000;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: gainsboro;
+  height: 100vh;
+  justify-content: center;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,106 @@
+<main class="main">
+  <div
+    class="note" 
+    style="padding-top: 20px;"
+  >
+
+  </div>
+  <div 
+    class="note action-text" >
+    @if (status === 'ready') {
+      Select a language
+    }
+    @else if (status === 'ai'){
+      ...
+    }
+    @else if (status === 'listening'){
+      listening ...
+    }
+    @else if (status === 'processing'){
+      processing script
+    }   
+    @else if (status === 'completed'){
+      completed
+    }        
+  </div>
+
+  <!-- ready -->
+  <div 
+    class="note "
+    *ngIf="status === 'ready'"
+  >
+    <div class="subnote">
+     <button (click)="record('en-AU|en-AU|Olivia|english')" class="bn632-hover bn20">English</button>
+     <button (click)="record('de-DE|de-DE|Vicki|german')" class="bn632-hover bn20">Deutsch</button>
+     <button (click)="record('es-US|es-US|Lupe|spanish')" class="bn632-hover bn20">Español</button>
+     <button (click)="record('fr-FR|fr-FR|Lea|french')" class="bn632-hover bn20">Français</button>
+    </div>
+  </div>
+
+  <!-- listening -->
+  <div
+    class="note"    
+    *ngIf="status === 'listening'"
+  > 
+    <img 
+      class="subnote"
+      width="100%" style="max-width: 200px;" src="assets/listening.gif" />
+    <div
+      class="transcript-box subnote"
+      *ngIf="transcribe"
+    >
+      <mat-card
+        class="transcript">
+        <mat-card-content>
+          <div
+              class="transcript-text"
+          >
+            {{ transcribe }}
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <!-- ai -->
+  <div
+    class="note"
+    *ngIf="status === 'ai'"
+  >
+    <img 
+      class="subnote"
+      width="100%" style="max-width: 200px;" src="assets/speaking.gif" />
+  </div>
+
+  <!-- processing -->
+  <div
+    class="note"
+    *ngIf="status === 'processing'"
+  >
+    <img 
+      class="subnote"
+      width="100%" style="max-width: 200px;" src="assets/processing.gif" />
+  </div>
+
+  <!-- completed -->
+  <div
+    class="note"
+    *ngIf="status === 'completed'"
+  >
+    <div
+      class="transcript-box subnote"
+    >
+      <mat-card
+        class="transcript">
+        <mat-card-content>
+          <div
+              class="transcript-text"
+          >
+            {{ parsedData }}
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+</main>
+<router-outlet></router-outlet>
