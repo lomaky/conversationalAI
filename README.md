@@ -1,5 +1,8 @@
 # Multilingual back-and-forth voice conversation and data extraction using AWS Bedrock (Llama3), AWS Trasncribe and AWS Polly written in Angular.
 
+![arch](./src/assets/lang-select.png) &nbsp;&nbsp;&nbsp; ![arch](./src/assets/ai-talking.gif) &nbsp;&nbsp;&nbsp; ![arch](./src/assets/human-talking.gif) 
+
+
 This repository provides a PoC implementation of using [Amazon Bedrock](https://aws.amazon.com/bedrock/) and other supporting AWS services to have a voice conversation with a Foundational AI model, specifically Llama3, analyse the transcript and collect specific information.
 The code demonstrates how to build an application with GenAI that supports natural back-and-forth voice conversations.
 
