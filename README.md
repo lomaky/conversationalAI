@@ -1,4 +1,4 @@
-# Multilingual back-and-forth voice conversation and data extraction using AWS Bedrock (Llama3), AWS Trasncribe and AWS Polly written in Angular.
+# Multilingual back-and-forth voice conversation and data extraction using AWS Bedrock (Llama3), AWS Transcribe and AWS Polly written in Angular.
 
 ![arch](./src/assets/lang-select.png) &nbsp;&nbsp;&nbsp; ![arch](./src/assets/ai-talking.gif) &nbsp;&nbsp;&nbsp; ![arch](./src/assets/human-talking.gif) 
 
@@ -18,12 +18,10 @@ In summary, this code serves as an example implementation for developers to refe
 
 ## Architecture reference
 
-To provide the best possible user experience for voice conversations, this solution utilizes streaming wherever supported by the underlying services. Specifically, streaming is used at every step except for the HTTP request to Amazon Bedrock. The Amazon Bedrock response is not streamed in this version.
-
 1. User voice audio is streamed in chunks to Amazon Transcribe for speech-to-text transcription.
 2. Amazon Transcribe processes the audio chunks as they arrive, transcribing them to text incrementally.
 3. The transcribed text is buffered in a memory object, representing the user's full message for Amazon Bedrock.
-4. When the user finishes speaking, an HTTP request is sent to Amazon Bedrock with the final transcribed text message.
+4. When the user finishes speaking (no audio in 1.5 seconds), a request is sent to Amazon Bedrock with the final transcribed text message.
 5. The Amazon Bedrock text response is sent back for text-to-speech conversion.
 6. The response from AWS Bedrock is submitted to Amazon Polly to synthesize into speech audio.
 7. The Polly speech audio chunks are played back incrementally on the user's device as they arrive.
